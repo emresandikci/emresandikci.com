@@ -1,15 +1,15 @@
 {
-  "name": "react-easy-boilerplate",
+  "name": "emresandikci-official-website",
   "version": "1.0.0",
-  "description": "A React.js easy starter boilerplate",
+  "description": "My personal website ",
   "main": "index.js",
-  "repository": "https://github.com/emresandikci/react-easy-boilerplate",
+  "repository": "https://github.com/emresandikci/emresandikci.com",
   "author": "emresandikci<me@emresandikci.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/emresandikci/react-easy-boilerplate/issues"
+    "url": "https://github.com/emresandikci/emresandikci.com/issues"
   },
-  "homepage": "https://github.com/emresandikci/react-easy-boilerplate#readme",
+  "homepage": "https://github.com/emresandikci/emresandikci.com#readme",
   "keywords": [
     "reactjs",
     "boilerplate",
@@ -59,6 +59,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "copy-webpack-plugin": "^5.1.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
@@ -68,7 +69,6 @@
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.1.7",
-    "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "url-loader": "^4.1.0",
