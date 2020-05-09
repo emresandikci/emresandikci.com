@@ -10,7 +10,7 @@ const htmlPackPlugin = new HtmlWebPackPlugin({
 const htmlCopyPlugin = new CopyWebpackPlugin([
   {
     from: './src/public',
-    to: 'public',
+    to: '',
     ignore: ['images/*', '*.html'],
   },
 ]);
