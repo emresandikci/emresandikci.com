@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { defaultTheme, GlobalStyle } from 'esducad-ui/dist/utils';
-import { Home } from 'pages';
+import { Home, NotFound } from 'pages';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Seo } from 'utils';
 
@@ -21,8 +21,11 @@ function App() {
       <Seo />
       <Router>
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Router>
