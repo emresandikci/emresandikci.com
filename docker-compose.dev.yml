@@ -1,0 +1,8 @@
+services:
+  emresandikci:
+    build:
+      context: .
+    image: ${IMAGE:-ghcr.io/emresandikci/emresandikci.com}:${TAG:-dev}
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped
