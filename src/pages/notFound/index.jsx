@@ -1,5 +1,5 @@
 import React from 'react';
-import { notFound } from 'public/images';
+import { notFound } from 'images';
 import { Box } from 'esducad-ui';
 
 const NotFound = React.memo(function NotFound() {

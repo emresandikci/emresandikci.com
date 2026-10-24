@@ -1,20 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Avatar, Flex, Box } from 'esducad-ui';
-import { github, linkedin, twitter, medium } from 'public/images';
+import { github, linkedin, twitter, medium } from 'images';
 import { constant } from 'utils';
 
 const { contact } = constant;
-const SocialIcon = ({ src, size, alt, ...props }) => (
-  <Avatar
-    css={`
-      cursor: pointer;
-    `}
-    src={src}
-    alt={alt}
-    size={size}
-    {...props}
-  />
-);
+const SocialIcon = styled(Avatar)`
+  cursor: pointer;
+`;
 
 const SocialIcons = () => (
   <Flex justifyContent="center" alignItems="center" animation="fadeInDown">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Avatar } from 'esducad-ui';
-import { logo } from 'public/images';
+import { logo } from 'images';
 
 const Logo = () => (
   <Box
