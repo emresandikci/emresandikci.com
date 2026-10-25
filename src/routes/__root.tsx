@@ -9,7 +9,9 @@ import {
 import { version } from '../../package.json';
 import { Footer } from '~/components/layout/footer';
 import { Header } from '~/components/layout/header';
+import { TerminalIntro } from '~/components/layout/terminal-intro';
 import { NotFound } from '~/components/not-found';
+import { introScript } from '~/utils/intro';
 import { rootHead } from '~/utils/seo';
 import { themeScript } from '~/utils/theme';
 import appCss from '~/styles.css?url';
@@ -37,9 +39,11 @@ function RootDocument({ children }: { children: ReactNode }) {
     <html lang={lang} suppressHydrationWarning>
       <head>
         <ScriptOnce>{themeScript}</ScriptOnce>
+        <ScriptOnce>{introScript}</ScriptOnce>
         <HeadContent />
       </head>
       <body>
+        <TerminalIntro />
         <Header />
         <main className="mx-auto max-w-3xl px-4 sm:px-6">{children}</main>
         <Footer />

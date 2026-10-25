@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CvRouteImport } from './routes/cv'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ApiIpRouteImport } from './routes/api/ip'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as BlogRssDotxmlRouteImport } from './routes/blog/rss[.]xml'
@@ -37,6 +38,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiIpRoute = ApiIpRouteImport.update({
+  id: '/api/ip',
+  path: '/api/ip',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/cv': typeof CvRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/ip': typeof ApiIpRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/rss.xml': typeof BlogRssDotxmlRoute
   '/blog/': typeof BlogIndexRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/cv': typeof CvRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/ip': typeof ApiIpRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/rss.xml': typeof BlogRssDotxmlRoute
   '/blog': typeof BlogIndexRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/cv': typeof CvRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/ip': typeof ApiIpRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/rss.xml': typeof BlogRssDotxmlRoute
   '/blog/': typeof BlogIndexRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/cv'
     | '/robots.txt'
     | '/sitemap.xml'
+    | '/api/ip'
     | '/blog/$slug'
     | '/blog/rss.xml'
     | '/blog/'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/cv'
     | '/robots.txt'
     | '/sitemap.xml'
+    | '/api/ip'
     | '/blog/$slug'
     | '/blog/rss.xml'
     | '/blog'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/cv'
     | '/robots.txt'
     | '/sitemap.xml'
+    | '/api/ip'
     | '/blog/$slug'
     | '/blog/rss.xml'
     | '/blog/'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   CvRoute: typeof CvRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ApiIpRoute: typeof ApiIpRoute
   BlogSlugRoute: typeof BlogSlugRoute
   BlogRssDotxmlRoute: typeof BlogRssDotxmlRoute
   BlogIndexRoute: typeof BlogIndexRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/ip': {
+      id: '/api/ip'
+      path: '/api/ip'
+      fullPath: '/api/ip'
+      preLoaderRoute: typeof ApiIpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   CvRoute: CvRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ApiIpRoute: ApiIpRoute,
   BlogSlugRoute: BlogSlugRoute,
   BlogRssDotxmlRoute: BlogRssDotxmlRoute,
   BlogIndexRoute: BlogIndexRoute,
