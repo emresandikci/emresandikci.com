@@ -34,3 +34,12 @@ Checks: `pnpm lint`, `pnpm type-check`, `pnpm test`, `pnpm format:check`.
 ## Release and deploy
 
 Pushing to `master` runs `.github/workflows/release.yml`: semantic-release cuts a version from Conventional Commits, the Docker image is pushed to `ghcr.io/emresandikci/emresandikci.com` and Coolify is told to redeploy. The container serves the site on port 80 (`node server.mjs`).
+
+## Release notifications
+
+Every release and every failed run of `.github/workflows/release.yml` sends a Telegram message. Add these repository secrets:
+
+- `TELEGRAM_BOT_TOKEN`: token of a bot created with @BotFather.
+- `TELEGRAM_CHAT_ID`: your chat id (send the bot a message, then read `chat.id` from `https://api.telegram.org/bot<TOKEN>/getUpdates`).
+
+The step is skipped with a warning when they are not set.

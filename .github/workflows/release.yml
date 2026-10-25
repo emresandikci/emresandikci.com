@@ -87,3 +87,58 @@ jobs:
         run: |
           curl -fsSL --request POST "$COOLIFY_WEBHOOK_URL" \
             --header "Authorization: Bearer $COOLIFY_TOKEN"
+
+  notify:
+    needs: [release, image]
+    if: >-
+      always() && (
+        needs.release.outputs.new_release_published == 'true'
+        || contains(needs.*.result, 'failure')
+        || contains(needs.*.result, 'cancelled')
+      )
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Send Telegram message
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RELEASE_RESULT: ${{ needs.release.result }}
+          IMAGE_RESULT: ${{ needs.image.result }}
+          VERSION: ${{ needs.release.outputs.new_release_version }}
+          REPO: ${{ github.repository }}
+          ACTOR: ${{ github.actor }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "::warning::TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID is not set, skipping notification"
+            exit 0
+          fi
+
+          icon() {
+            case "$1" in
+              success) echo "✅" ;;
+              failure) echo "❌" ;;
+              cancelled) echo "🚫" ;;
+              skipped) echo "⏭️" ;;
+              *) echo "❔" ;;
+            esac
+          }
+
+          if [ "$RELEASE_RESULT" = "success" ] && [ "$IMAGE_RESULT" = "success" ]; then
+            TITLE="✅ ${REPO} v${VERSION} released and deployed"
+          else
+            TITLE="❌ ${REPO} pipeline failed"
+          fi
+
+          TEXT="${TITLE}
+          $(icon "$RELEASE_RESULT") Release: ${RELEASE_RESULT}
+          $(icon "$IMAGE_RESULT") Image + Coolify deploy: ${IMAGE_RESULT}
+          By ${ACTOR}
+          ${RUN_URL}"
+
+          curl -fsS -o /dev/null -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=${TEXT}" \
+            --data-urlencode "disable_web_page_preview=true"
