@@ -61,6 +61,7 @@ ${items.join('\n')}
 export function robotsTxt() {
   return `User-agent: *
 Allow: /
+Disallow: /api/
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `;

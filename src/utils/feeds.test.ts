@@ -56,5 +56,6 @@ describe('rssXml', () => {
 describe('robotsTxt', () => {
   it('points to the sitemap', () => {
     expect(robotsTxt()).toContain('Sitemap: https://www.emresandikci.com/sitemap.xml');
+    expect(robotsTxt()).toContain('Disallow: /api/');
   });
 });
