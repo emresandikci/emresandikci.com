@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/emresandikci/emresandikci.com/compare/v1.2.0...v1.2.1) (2026-10-25)
+
+
+### Bug Fixes
+
+* **home:** separate Walnut Lab and Keysty in the hero ([fca3773](https://github.com/emresandikci/emresandikci.com/commit/fca3773a750612876e6cf1d900bc179c03816414))
+
 # [1.2.0](https://github.com/emresandikci/emresandikci.com/compare/v1.1.0...v1.2.0) (2026-10-25)
 
 
