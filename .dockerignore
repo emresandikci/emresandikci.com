@@ -1,5 +1,4 @@
 node_modules
-build
 dist
 .git
 .gitignore
@@ -9,6 +8,8 @@ Dockerfile
 Dockerfile.*
 .dockerignore
 README.md
+docs
+.superpowers
 .vscode
 .idea
 .DS_Store
