@@ -1,4 +1,8 @@
-.next/
-.vscode/
-node_modules/
-server/
+node_modules
+dist
+pnpm-lock.yaml
+CHANGELOG.md
+src/routeTree.gen.ts
+public
+content
+.superpowers
