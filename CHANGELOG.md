@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/emresandikci/emresandikci.com/compare/v1.0.0...v1.1.0) (2026-10-25)
+
+
+### Bug Fixes
+
+* remove superpeer ([1ea7715](https://github.com/emresandikci/emresandikci.com/commit/1ea7715bda32400d5cfef86e23cf46b8aeb44a86))
+
+
+### Features
+
+* write version to the console ([73725f6](https://github.com/emresandikci/emresandikci.com/commit/73725f62b5ba6f79307706e2c3e4a377089971b3))
+
 # 1.0.0 (2026-10-25)
 
 
