@@ -1,3 +1,14 @@
+# [1.2.0](https://github.com/emresandikci/emresandikci.com/compare/v1.1.0...v1.2.0) (2026-10-25)
+
+
+### Features
+
+* add layout, light and dark theme and SEO helpers ([b491442](https://github.com/emresandikci/emresandikci.com/commit/b4914427c1281290dd53c095a0eb2cc8b53fc799))
+* **blog:** add Markdown blog with migrated Medium posts ([53da441](https://github.com/emresandikci/emresandikci.com/commit/53da441be712202f2c6113f1ac4e2fd7e196890d))
+* **cv:** add CV page with company visuals and PDF downloads ([600e5c4](https://github.com/emresandikci/emresandikci.com/commit/600e5c47bfcb8877a3ea495b950923dc81d4ff4a))
+* generate sitemap, robots.txt and RSS feed ([2e88763](https://github.com/emresandikci/emresandikci.com/commit/2e88763d2aa5a9e82ccec1ad307bf37e2700cbb1))
+* **home:** add home page with hero, selected work and latest posts ([0e89a5c](https://github.com/emresandikci/emresandikci.com/commit/0e89a5c1460d58f6aac11d8fd7fdfba8f1ad2ec2))
+
 # [1.1.0](https://github.com/emresandikci/emresandikci.com/compare/v1.0.0...v1.1.0) (2026-10-25)
 
 
