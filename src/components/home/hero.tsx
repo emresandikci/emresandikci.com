@@ -27,26 +27,33 @@ export function Hero() {
         <em className="text-accent not-italic">simple, automated ones</em>, across code,
         infrastructure and teams.
       </p>
-      <p className="mt-5 font-mono text-sm text-muted">
-        <span className="text-accent">now →</span> Staff Engineer & Team Lead at{' '}
-        <a
-          href="https://www.walnutlab.com.tr"
-          target="_blank"
-          rel="noreferrer"
-          className="text-fg underline decoration-line underline-offset-4 hover:text-accent"
-        >
-          Walnut Lab
-        </a>{' '}
-        · building{' '}
-        <a
-          href="https://keysty.com"
-          target="_blank"
-          rel="noreferrer"
-          className="text-fg underline decoration-line underline-offset-4 hover:text-accent"
-        >
-          Keysty
-        </a>
-      </p>
+      <dl className="mt-5 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 font-mono text-sm text-muted">
+        <dt className="text-accent">work →</dt>
+        <dd>
+          Staff Engineer & Team Lead at{' '}
+          <a
+            href="https://www.walnutlab.com.tr"
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg underline decoration-line underline-offset-4 hover:text-accent"
+          >
+            Walnut Lab
+          </a>
+        </dd>
+        <dt className="text-accent">side →</dt>
+        <dd>
+          Building{' '}
+          <a
+            href="https://keysty.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg underline decoration-line underline-offset-4 hover:text-accent"
+          >
+            Keysty
+          </a>
+          , a platform for real estate agencies
+        </dd>
+      </dl>
       <div className="mt-10 flex flex-wrap gap-3">
         <a
           href={MAILTO}
