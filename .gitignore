@@ -8,3 +8,4 @@ yarn-*
 !.vscode/settings.json
 .env
 .superpowers/
+docs/
