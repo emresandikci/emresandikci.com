@@ -4,7 +4,7 @@ import { DownloadButtons } from '~/components/cv/download-buttons';
 import { RoleCard } from '~/components/cv/role-card';
 import { cv } from '~/content/cv';
 import { pageHead } from '~/utils/seo';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, MAILTO, NAME, TITLE } from '~/utils/site';
+import { GITHUB_URL, LINKEDIN_URL, MAILTO, NAME, TITLE } from '~/utils/site';
 
 export const Route = createFileRoute('/cv')({
   head: () =>
@@ -26,7 +26,7 @@ function CvPage() {
         <p className="mt-2 font-mono text-accent">{TITLE}</p>
         <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 font-mono text-sm text-muted">
           <a href={MAILTO} className={link}>
-            {EMAIL}
+            email me
           </a>
           <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className={link}>
             linkedin

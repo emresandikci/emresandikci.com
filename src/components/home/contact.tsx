@@ -1,5 +1,5 @@
 import { DownloadButtons } from '~/components/cv/download-buttons';
-import { EMAIL, GITHUB_URL, LINKEDIN_URL, MAILTO } from '~/utils/site';
+import { GITHUB_URL, LINKEDIN_URL, MAILTO } from '~/utils/site';
 
 const link = 'transition hover:text-accent';
 
@@ -11,7 +11,7 @@ export function Contact() {
         href={MAILTO}
         className="mt-4 inline-block font-mono text-xl text-heading underline decoration-accent underline-offset-4 hover:text-accent"
       >
-        {EMAIL}
+        Tell me about it →
       </a>
       <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4 font-mono text-sm text-muted">
         <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className={link}>
