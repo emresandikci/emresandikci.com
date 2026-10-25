@@ -11,58 +11,67 @@
   "homepage": "https://github.com/emresandikci/emresandikci.com#readme",
   "type": "module",
   "keywords": [
-    "reactjs",
-    "boilerplate",
-    "styled-components",
-    "styled-system",
-    "esducad-ui",
-    "kit"
+    "tanstack-start",
+    "react",
+    "portfolio",
+    "blog"
   ],
   "scripts": {
-    "dev": "vite --open",
-    "start": "vite",
+    "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{js,jsx,css,json}\"",
-    "lint": "eslint --ext .js,.jsx src",
-    "lint:fix": "eslint --ext .js,.jsx --fix src",
-    "validate": "prettier --check \"src/**/*.{js,jsx,css,json}\" && eslint --ext .js,.jsx src"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "start": "node server.mjs",
+    "lint": "eslint src --max-warnings 0",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run"
   },
   "lint-staged": {
-    "src/**/!(*story).{js,jsx}": [
-      "pnpm format",
-      "pnpm lint:fix",
-      "pnpm validate"
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "dependencies": {
-    "esducad-ui": "https://github.com/emresandikci/esducad-ui#master",
-    "prop-types": "^15.8.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.0.0",
-    "react-router-dom": "^5.1.2",
-    "styled-components": "^5.1.0"
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@shikijs/markdown-it": "^4.5.0",
+    "@tanstack/react-router": "1.170.41",
+    "@tanstack/react-start": "1.168.60",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^15.0.3",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-icons": "^5.7.0",
+    "shiki": "^4.5.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.29.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@vitejs/plugin-react": "^6.1.2",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.19.0",
-    "husky": "^4.2.5",
+    "@eslint/js": "^10.0.1",
+    "@rolldown/plugin-babel": "^0.2.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/markdown-it": "^14.2.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "eslint": "^10.11.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
     "lint-staged": "^10.1.7",
-    "prettier": "^2.0.5",
-    "vite": "^8.3.5"
+    "prettier": "^3.9.9",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.0",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
   },
   "packageManager": "pnpm@10.30.1",
   "engines": {

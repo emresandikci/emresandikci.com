@@ -1,10 +1,10 @@
 ### General ###  
 .DS_Store
 dist/
-build/
 node_modules/
 yarn-*
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
 .env
+.superpowers/
