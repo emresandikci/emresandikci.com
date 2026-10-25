@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/emresandikci/emresandikci.com/compare/v1.2.1...v1.3.0) (2026-10-25)
+
+
+### Bug Fixes
+
+* show contact links instead of the email address ([cfc10f2](https://github.com/emresandikci/emresandikci.com/commit/cfc10f23cf66d98838a3e3d53eb85848262f8388))
+
+
+### Features
+
+* add a terminal login intro that greets visitors by IP ([852e5be](https://github.com/emresandikci/emresandikci.com/commit/852e5be5c1cc90c7b0817cc72761b656fa614988))
+
 ## [1.2.1](https://github.com/emresandikci/emresandikci.com/compare/v1.2.0...v1.2.1) (2026-10-25)
 
 
