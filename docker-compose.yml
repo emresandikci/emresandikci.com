@@ -3,5 +3,5 @@ services:
     image: ${IMAGE:-ghcr.io/emresandikci/emresandikci.com}:${TAG:-latest}
     pull_policy: always
     expose:
-      - "80"
+      - '80'
     restart: unless-stopped
