@@ -1,3 +1,19 @@
+# [1.5.0](https://github.com/emresandikci/emresandikci.com/compare/v1.4.0...v1.5.0) (2026-10-28)
+
+
+### Bug Fixes
+
+* **blog:** format the jQuery post code samples as highlighted code blocks ([c29cc97](https://github.com/emresandikci/emresandikci.com/commit/c29cc97835abd87dd0403af6b6f23bb3c9421b0b))
+
+
+### Features
+
+* **blog:** add the English version of the homelab post ([f46286c](https://github.com/emresandikci/emresandikci.com/commit/f46286cd15228f4f69fc9cbf082c23c1d68b8b7e))
+* **blog:** open external links in posts in a new tab ([e0b3eec](https://github.com/emresandikci/emresandikci.com/commit/e0b3eec48325ed3ee3912cf41c13f153669cccbe))
+* **home:** add aducad as a side project ([27327e3](https://github.com/emresandikci/emresandikci.com/commit/27327e341263504f09971b407d7ab0a198f6f8aa))
+* **home:** link to all posts below the latest posts ([68aa380](https://github.com/emresandikci/emresandikci.com/commit/68aa380644c1dd3971159b2b2f1ff7589706d124))
+* **seo:** link post translations with hreflang and canonicalize Medium posts to the site ([8e63ace](https://github.com/emresandikci/emresandikci.com/commit/8e63ace4b067f8bc26a69dcfb0b681195a17f98a))
+
 # [1.4.0](https://github.com/emresandikci/emresandikci.com/compare/v1.3.0...v1.4.0) (2026-10-28)
 
 
