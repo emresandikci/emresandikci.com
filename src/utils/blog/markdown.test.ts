@@ -18,9 +18,13 @@ describe('renderMarkdown', () => {
     expect(html).toContain('&lt;script&gt;');
   });
 
-  it('renders links', async () => {
+  it('opens external links in a new tab', async () => {
     expect(await renderMarkdown('[site](https://example.com)')).toContain(
-      '<a href="https://example.com">site</a>'
+      '<a href="https://example.com" target="_blank" rel="noreferrer">site</a>'
     );
+  });
+
+  it('keeps internal links in the same tab', async () => {
+    expect(await renderMarkdown('[cv](/cv)')).toContain('<a href="/cv">cv</a>');
   });
 });

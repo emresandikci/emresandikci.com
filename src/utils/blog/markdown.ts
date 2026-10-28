@@ -13,6 +13,13 @@ async function createRenderer() {
       fallbackLanguage: 'text' as 'tex',
     })
   );
+  md.renderer.rules.link_open = (tokens, idx, options, _env, self) => {
+    if (/^https?:\/\//.test(String(tokens[idx].attrGet('href')))) {
+      tokens[idx].attrSet('target', '_blank');
+      tokens[idx].attrSet('rel', 'noreferrer');
+    }
+    return self.renderToken(tokens, idx, options);
+  };
   return md;
 }
 
