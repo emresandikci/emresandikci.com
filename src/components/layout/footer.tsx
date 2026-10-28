@@ -1,5 +1,4 @@
 import { GITHUB_URL, LINKEDIN_URL, MAILTO, NAME, RSS_PATH } from '~/utils/site';
-import { CvMenu } from '~/components/cv/cv-menu';
 import { useVisitorIp } from '~/utils/visitor-ip';
 
 const link = 'transition hover:text-accent';
@@ -19,9 +18,6 @@ export function Footer() {
         <a href={GITHUB_URL} className={link} target="_blank" rel="noreferrer">
           github
         </a>
-        <CvMenu triggerClassName={link} placement="up">
-          cv.pdf
-        </CvMenu>
         <a href={RSS_PATH} className={link}>
           rss
         </a>

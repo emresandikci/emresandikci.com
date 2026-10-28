@@ -1,4 +1,3 @@
-import { DownloadButtons } from '~/components/cv/download-buttons';
 import { GITHUB_URL, LINKEDIN_URL, MAILTO } from '~/utils/site';
 
 const link = 'transition hover:text-accent';
@@ -20,7 +19,6 @@ export function Contact() {
         <a href={GITHUB_URL} target="_blank" rel="noreferrer" className={link}>
           github
         </a>
-        <DownloadButtons />
       </div>
     </div>
   );
