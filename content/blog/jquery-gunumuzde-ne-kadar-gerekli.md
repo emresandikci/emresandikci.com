@@ -36,94 +36,110 @@ Aslında bu duruma şöyle bakarsak ufkunuzu biraz daha açmış olurum sanırı
 
 **Selectors**
 
-$(‘.container’)  
-   
-document.querySelector(‘.container’)
+```js
+$('.container');
 
-document.querySelectorAll(‘.container span’)
+document.querySelector('.container');
+
+document.querySelectorAll('.container span');
+```
 
 **Append**
 
-$(‘.container’).append(element);
+```js
+$('.container').append(element);
 
-document.querySelector(‘.container’).appendChild(element);
+document.querySelector('.container').appendChild(element);
+```
 
 **Children**
 
-$(‘.container’).children();
+```js
+$('.container').children();
 
-document.querySelector(‘.container’).children;
+document.querySelector('.container').children;
+```
 
 **Clone**
 
-$(‘.container’).clone();
+```js
+$('.container').clone();
 
-document.querySelector(‘.container’).cloneNode(); // ilgili elementi kopyalar
+document.querySelector('.container').cloneNode(); // ilgili elementi kopyalar
 
-document.querySelector(‘.container’).cloneNode(true); // ilgili elementin alt elementlerinide dahil eder.
+document.querySelector('.container').cloneNode(true); // ilgili elementin alt elementlerinide dahil eder.
+```
 
 **Attribute**
 
-$(‘a’).attr(‘href’);
+```js
+$('a').attr('href');
 
-document.querySelector(‘a’).getAttribute(‘href’);
+document.querySelector('a').getAttribute('href');
+```
 
 **HTML/TEXT**
 
-$(‘.container’).html();
+```js
+$('.container').html();
 
-document.querySelector(‘.container’).innerHTML;
+document.querySelector('.container').innerHTML;
 
-$(‘.container’).text();
+$('.container').text();
 
-document.querySelector(‘.container’).innerText;
+document.querySelector('.container').innerText;
+```
 
 **Each**
 
-$(‘.container .item’)  
-.each(function(index,element){
-
-//todo
-
-})
-
-document.querySelectorAll(‘.container .item’)  
-.forEach((element,index)=>{
-
-//todo
-
+```js
+$('.container .item').each(function (index, element) {
+  //todo
 });
+
+document.querySelectorAll('.container .item').forEach((element, index) => {
+  //todo
+});
+```
 
 **Json Parser**
 
+```js
 $.parseJSON(data);
 
 JSON.parse(data);
+```
 
 **Hide/Show**
 
-$(‘.container’).hide()
+```js
+$('.container').hide();
 
-document.querySelector(‘.container’).style.display=‘none’;
+document.querySelector('.container').style.display = 'none';
 
-$(‘.container’).show()
+$('.container').show();
 
-document.querySelector(‘.container’).style.display=‘’;
+document.querySelector('.container').style.display = '';
+```
 
 **AJAX**
 
-$.ajax({  
- type: ‘POST’,  
- url: ‘/my/url’,  
- data: data,  
- success:function(data)\[console.log(data)},  
- error:function(data){}  
+```js
+$.ajax({
+  type: 'POST',
+  url: '/my/url',
+  data: data,
+  success: function (data) {
+    console.log(data);
+  },
+  error: function (data) {},
 });
 
-fetch(url,options)  
-  .then(response=>{return response.json()})  
-  .then(response=>{console.log(response)})  
-  .catch(response=>{console.log('err',response)});
+fetch(url, options)
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((response) => console.log('err', response));
+```
 
 > Yukarıda belirttiğim bazı örnekler gibi JQuery’e bağımlı kalmadan birçok işimizi zaten halledebiliyorken neden ekstra bir kütüphane ile sayfamızı yoralım ? Bunlar sadece benim değindiğim çok kullanılan birkaç özelliktir.
 
