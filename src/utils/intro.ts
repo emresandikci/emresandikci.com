@@ -1,6 +1,6 @@
 export type IntroLine = { kind: 'command' | 'output'; text: string };
 
-export const introScript = `if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.dataset.intro='1'`;
+export const introScript = `try{if(!location.pathname.startsWith('/blog/')&&!sessionStorage.getItem('intro')&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){sessionStorage.setItem('intro','1');document.documentElement.dataset.intro='1'}}catch(e){}`;
 
 export function introLines(now: Date, ip: string | null): IntroLine[] {
   const day = now.toDateString();

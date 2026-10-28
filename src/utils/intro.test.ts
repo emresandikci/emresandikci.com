@@ -1,11 +1,31 @@
 import { describe, expect, it } from 'vitest';
 import { introLines, introScript } from './intro';
 
+function runIntroScript(pathname: string, { seen = false, reducedMotion = false } = {}) {
+  const store = new Map(seen ? [['intro', '1']] : []);
+  const document = { documentElement: { dataset: {} as Record<string, string> } };
+  new Function('window', 'document', 'location', 'sessionStorage', introScript)(
+    { matchMedia: () => ({ matches: reducedMotion }) },
+    document,
+    { pathname },
+    { getItem: (key: string) => store.get(key) ?? null, setItem: store.set.bind(store) }
+  );
+  return document.documentElement.dataset.intro;
+}
+
 describe('introScript', () => {
-  it('checks reduced motion before painting and keeps no session state', () => {
-    expect(introScript).toContain('prefers-reduced-motion: reduce');
-    expect(introScript).toContain("dataset.intro='1'");
-    expect(introScript).not.toContain('sessionStorage');
+  it('plays on the first page of a session', () => {
+    expect(runIntroScript('/')).toBe('1');
+    expect(runIntroScript('/blog')).toBe('1');
+  });
+
+  it('skips once played in this session', () => {
+    expect(runIntroScript('/', { seen: true })).toBeUndefined();
+  });
+
+  it('skips blog posts and reduced motion', () => {
+    expect(runIntroScript('/blog/evde-mini-datacenter-kurmak')).toBeUndefined();
+    expect(runIntroScript('/', { reducedMotion: true })).toBeUndefined();
   });
 });
 
