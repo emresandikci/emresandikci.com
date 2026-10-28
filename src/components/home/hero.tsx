@@ -51,7 +51,16 @@ export function Hero() {
           >
             Keysty
           </a>
-          , a platform for real estate agencies
+          , a platform for real estate agencies, and{' '}
+          <a
+            href="https://aducad.com"
+            target="_blank"
+            rel="noreferrer"
+            className="text-fg underline decoration-line underline-offset-4 hover:text-accent"
+          >
+            aducad
+          </a>
+          , school management for English-language schools
         </dd>
       </dl>
       <div className="mt-10 flex flex-wrap gap-3">
