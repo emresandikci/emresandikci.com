@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { Link, createFileRoute } from '@tanstack/react-router';
 import { PostList } from '~/components/blog/post-list';
 import { Contact } from '~/components/home/contact';
 import { Hero } from '~/components/home/hero';
@@ -35,6 +35,12 @@ function Home() {
         <div className="mt-8">
           <PostList posts={posts} />
         </div>
+        <Link
+          to="/blog"
+          className="mt-6 inline-block font-mono text-sm text-accent hover:underline"
+        >
+          All posts →
+        </Link>
       </section>
       <section className="mt-32">
         <SectionLabel index={4}>contact</SectionLabel>
