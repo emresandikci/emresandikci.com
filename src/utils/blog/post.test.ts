@@ -34,9 +34,11 @@ describe('parsePost', () => {
     expect(() => parsePost('x.md', raw(valid.replace('lang: en', 'lang: de')))).toThrow(/x\.md/);
   });
 
-  it('keeps an optional canonical', () => {
-    const { meta } = parsePost('x.md', raw(`${valid}\ncanonical: https://medium.com/@e/x`));
-    expect(meta.canonical).toBe('https://medium.com/@e/x');
+  it('keeps an optional translation and Medium link', () => {
+    const front = `${valid}\ntranslation: freelance-calismak\nmedium: https://medium.com/@e/x`;
+    const { meta } = parsePost('x.md', raw(front));
+    expect(meta.translation).toBe('freelance-calismak');
+    expect(meta.medium).toBe('https://medium.com/@e/x');
   });
 });
 

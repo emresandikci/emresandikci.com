@@ -1,5 +1,6 @@
 import { Link, createFileRoute } from '@tanstack/react-router';
 import { getPost } from '~/utils/blog/posts.functions';
+import { postAlternates } from '~/utils/i18n';
 import { pageHead } from '~/utils/seo';
 
 export const Route = createFileRoute('/blog/$slug')({
@@ -10,9 +11,9 @@ export const Route = createFileRoute('/blog/$slug')({
           title: loaderData.title,
           description: loaderData.description,
           path: `/blog/${loaderData.slug}`,
-          canonical: loaderData.canonical,
           type: 'article',
           lang: loaderData.lang,
+          alternates: postAlternates(loaderData),
         })
       : {},
   component: PostPage,
@@ -31,10 +32,10 @@ function PostPage() {
         {post.date} · {post.readingMinutes} min read
         {post.tags.length > 0 && ` · ${post.tags.join(', ')}`}
       </p>
-      {post.canonical && (
+      {post.medium && (
         <p className="mt-2 text-sm text-muted">
           Originally published on{' '}
-          <a href={post.canonical} target="_blank" rel="noreferrer" className="text-accent">
+          <a href={post.medium} target="_blank" rel="noreferrer" className="text-accent">
             Medium
           </a>
           .

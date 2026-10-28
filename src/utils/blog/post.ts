@@ -1,19 +1,19 @@
 import matter from 'gray-matter';
+import { LANGS, type Lang } from '../i18n';
 
 export type PostMeta = {
   slug: string;
   title: string;
   date: string;
   description: string;
-  lang: 'en' | 'tr';
+  lang: Lang;
   tags: string[];
-  canonical?: string;
+  translation?: string;
+  medium?: string;
   readingMinutes: number;
 };
 
 export type Post = PostMeta & { html: string };
-
-const LANGS = ['en', 'tr'] as const;
 
 export function readingMinutes(text: string) {
   const words = text.split(/\s+/).filter(Boolean).length;
@@ -48,7 +48,8 @@ export function parsePost(fileName: string, raw: string) {
     lang: data.lang,
     tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
     readingMinutes: readingMinutes(content),
-    ...(typeof data.canonical === 'string' && { canonical: data.canonical }),
+    ...(typeof data.translation === 'string' && { translation: data.translation }),
+    ...(typeof data.medium === 'string' && { medium: data.medium }),
   };
 
   return { meta, body: content };

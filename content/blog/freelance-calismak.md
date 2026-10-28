@@ -3,8 +3,9 @@ title: "Freelance Çalışmak"
 date: 2018-11-15
 description: "Freelance çalışmanın ne demek olduğu, getirdiği sorumluluklar, uzaktan çalışmaktan farkı ve hangi mesleklere uygun olduğu üzerine."
 lang: tr
+translation: work-as-a-freelancer
 tags: ["freelancers", "freelance", "uzaktan-çalışmak", "developer", "evden-çalışmak"]
-canonical: https://emresandikci.medium.com/freelance-%C3%A7al%C4%B1%C5%9Fmak-399b9e607381
+medium: https://emresandikci.medium.com/freelance-%C3%A7al%C4%B1%C5%9Fmak-399b9e607381
 ---
 
 ![](/blog/freelance-calismak/image-1.jpeg)

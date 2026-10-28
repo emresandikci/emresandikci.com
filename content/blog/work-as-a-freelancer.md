@@ -3,8 +3,9 @@ title: "Work as a freelancer"
 date: 2021-02-14
 description: "What working as a freelancer really takes, the responsibilities that come with it, and how freelancing differs from remote work."
 lang: en
+translation: freelance-calismak
 tags: ["work-from-home", "milestones", "remote", "freelancers", "freelance"]
-canonical: https://emresandikci.medium.com/work-as-a-freelancer-82666c062f7b
+medium: https://emresandikci.medium.com/work-as-a-freelancer-82666c062f7b
 ---
 
 ![](/blog/work-as-a-freelancer/image-1.jpeg)

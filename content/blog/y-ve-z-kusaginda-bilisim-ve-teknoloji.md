@@ -4,7 +4,7 @@ date: 2017-06-30
 description: "Y ve Z kuşağında teknolojiye olan erken ilgi ve çocukların bilişim eğitiminde topluluklara düşen rol üzerine düşüncelerim."
 lang: tr
 tags: ["bilişim", "eğitim", "topluluk", "çocuk", "teknoloji"]
-canonical: https://emresandikci.medium.com/y-ve-z-ku%C5%9Fa%C4%9F%C4%B1nda-bili%C5%9Fim-ve-teknoloji-f89a77b3de8b
+medium: https://emresandikci.medium.com/y-ve-z-ku%C5%9Fa%C4%9F%C4%B1nda-bili%C5%9Fim-ve-teknoloji-f89a77b3de8b
 ---
 
 Belkide üzerine çok uzun uzun konuşulması gereken bir konu olabilir.Günümüzde popülerliği gittikçe artan ve artık 4–5 yaş sınırına kadar inen teknoloji meraklılarına pek yabancı değiliz.

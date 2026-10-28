@@ -17,6 +17,19 @@ describe('validatePosts', () => {
     expect(() => validatePosts(dir)).toThrow(/broken-post\.md/);
   });
 
+  it('rejects a translation that does not link back', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'posts-'));
+    writeFileSync(
+      join(dir, 'a.md'),
+      post('title: A\ndate: 2026-01-01\ndescription: d\nlang: en\ntranslation: b')
+    );
+    writeFileSync(
+      join(dir, 'b.md'),
+      post('title: B\ndate: 2026-01-01\ndescription: d\nlang: tr')
+    );
+    expect(() => validatePosts(dir)).toThrow(/a\.md/);
+  });
+
   it('passes the real content', () => {
     expect(() => validatePosts('content/blog')).not.toThrow();
   });

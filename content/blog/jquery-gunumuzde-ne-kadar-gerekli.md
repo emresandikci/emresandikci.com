@@ -4,7 +4,7 @@ date: 2018-04-03
 description: "JQuery bugün hâlâ gerekli mi? Saf JavaScript ile karşılaştırma, örnekler, animasyonlar ve SPA dünyasında JQuery'nin yeri."
 lang: tr
 tags: ["jquery", "dom", "frontend", "javascript", "web-development"]
-canonical: https://emresandikci.medium.com/jquery-g%C3%BCn%C3%BCm%C3%BCzde-ne-kadar-gerekli-819cfbcd363e
+medium: https://emresandikci.medium.com/jquery-g%C3%BCn%C3%BCm%C3%BCzde-ne-kadar-gerekli-819cfbcd363e
 ---
 
 Başlamadan önce belirtmek isterim, burada yazacaklarım sadece benim şahsi fikirlerim olacaktır ve amacım _JQuery_ kötülemek değildir, aksine _pure (vanilla) javascript_ ile birçok işimizi kolayca halledebileceğimizi ve alternatif 3.party birkaç farklı framework veya kütüphaneyi göstermek istedim.

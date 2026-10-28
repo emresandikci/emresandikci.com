@@ -51,7 +51,6 @@ export function rssXml(posts: PostMeta[]) {
     <title>${escapeXml(NAME)}</title>
     <link>${SITE_URL}/blog</link>
     <description>Notes on software engineering, architecture, DevOps and freelancing.</description>
-    <language>en</language>
 ${items.join('\n')}
   </channel>
 </rss>
