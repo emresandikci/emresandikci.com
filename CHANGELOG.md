@@ -1,3 +1,20 @@
+# [1.4.0](https://github.com/emresandikci/emresandikci.com/compare/v1.3.0...v1.4.0) (2026-10-28)
+
+
+### Bug Fixes
+
+* **footer:** show Türkiye and the TRT time zone ([51f7726](https://github.com/emresandikci/emresandikci.com/commit/51f772610ec359c8d697d5ddce252ee75b33a3ae))
+
+
+### Features
+
+* **blog:** add homelab post ([e3ea45b](https://github.com/emresandikci/emresandikci.com/commit/e3ea45b3c65657b1ce14d3cbdcdbe7d72451ec7f))
+
+
+### Performance Improvements
+
+* play the terminal intro once per session and skip it on blog posts ([daa7dc8](https://github.com/emresandikci/emresandikci.com/commit/daa7dc8aaffaf15534b07db5d2aba693a70846b3))
+
 # [1.3.0](https://github.com/emresandikci/emresandikci.com/compare/v1.2.1...v1.3.0) (2026-10-25)
 
 
