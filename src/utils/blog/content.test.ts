@@ -8,8 +8,9 @@ const posts = readdirSync('content/blog')
 
 describe('blog content', () => {
   it('has the four migrated Medium posts', () => {
-    expect(posts).toHaveLength(4);
-    posts.forEach(({ meta }) =>
+    const migrated = posts.filter(({ meta }) => meta.canonical);
+    expect(migrated).toHaveLength(4);
+    migrated.forEach(({ meta }) =>
       expect(meta.canonical).toMatch(/^https:\/\/([a-z0-9-]+\.)?medium\.com\//)
     );
   });
@@ -17,6 +18,7 @@ describe('blog content', () => {
   it('marks the Turkish posts', () => {
     const tr = posts.filter(({ meta }) => meta.lang === 'tr').map(({ meta }) => meta.slug);
     expect(tr.sort()).toEqual([
+      'evde-mini-datacenter-kurmak',
       'freelance-calismak',
       'jquery-gunumuzde-ne-kadar-gerekli',
       'y-ve-z-kusaginda-bilisim-ve-teknoloji',
