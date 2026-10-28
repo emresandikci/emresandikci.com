@@ -20,6 +20,8 @@ describe('blog content', () => {
       posts.find(({ meta }) => meta.slug === slug)?.meta.translation;
     expect(translation('freelance-calismak')).toBe('work-as-a-freelancer');
     expect(translation('work-as-a-freelancer')).toBe('freelance-calismak');
+    expect(translation('evde-mini-datacenter-kurmak')).toBe('building-a-mini-datacenter-at-home');
+    expect(translation('building-a-mini-datacenter-at-home')).toBe('evde-mini-datacenter-kurmak');
   });
 
   it('marks the Turkish posts', () => {

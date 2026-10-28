@@ -3,6 +3,7 @@ title: "Evde Mini Datacenter Kurmak: Neden ve Nasıl Bir Homelab Kurdum?"
 date: 2026-10-28
 description: "Bir Mini PC, Proxmox VE ve port açmadan kurulan bir yapıyla, minimum bütçe ile maksimum verim odaklı homelab kurulumum."
 lang: tr
+translation: building-a-mini-datacenter-at-home
 tags: ["homelab", "proxmox", "self-hosted", "cloudflare", "pi-hole", "docker"]
 ---
 
