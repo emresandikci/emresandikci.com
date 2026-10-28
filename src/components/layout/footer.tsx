@@ -36,7 +36,7 @@ export function Footer() {
               you: <span className="text-accent">{ip}</span> · me:{' '}
             </>
           )}
-          Istanbul · UTC+3
+          Türkiye · TRT (UTC+3)
         </span>
       </p>
     </footer>
