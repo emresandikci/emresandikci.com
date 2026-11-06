@@ -29,7 +29,7 @@ function BlogIndex() {
           href={RSS_PATH}
           className="inline-flex items-center gap-1.5 font-mono text-sm text-muted transition hover:text-accent"
         >
-          <LuRss className="size-4" />
+          <LuRss aria-hidden className="size-4" />
           rss
         </a>
       </div>

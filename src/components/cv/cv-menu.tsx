@@ -48,7 +48,7 @@ export function CvMenu({
         type="button"
         aria-haspopup="menu"
         aria-expanded={open}
-        aria-controls={menuId}
+        aria-controls={open ? menuId : undefined}
         onClick={() => setOpen((value) => !value)}
         className={triggerClassName}
       >
