@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Link, createFileRoute } from '@tanstack/react-router';
 import { getPost } from '~/utils/blog/posts.functions';
 import { postAlternates } from '~/utils/i18n';
@@ -19,8 +20,32 @@ export const Route = createFileRoute('/blog/$slug')({
   component: PostPage,
 });
 
+function syncCodeBlockFocus(pre: Element) {
+  if (pre.scrollWidth > pre.clientWidth) pre.setAttribute('tabindex', '0');
+  else pre.removeAttribute('tabindex');
+}
+
+// Shiki gives every block a tab stop, but only code that scrolls needs one.
+function useCodeBlockFocus(html: string) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const blocks = ref.current?.querySelectorAll('pre') ?? [];
+    const observer = new ResizeObserver((entries) => {
+      entries.forEach((entry) => syncCodeBlockFocus(entry.target));
+    });
+    blocks.forEach((pre) => observer.observe(pre));
+    // A web font can widen the code without resizing the block.
+    void document.fonts.ready.then(() => blocks.forEach(syncCodeBlockFocus));
+    return () => observer.disconnect();
+  }, [html]);
+
+  return ref;
+}
+
 function PostPage() {
   const post = Route.useLoaderData();
+  const proseRef = useCodeBlockFocus(post.html);
 
   return (
     <article lang={post.lang} className="pt-8">
@@ -46,7 +71,11 @@ function PostPage() {
           .
         </p>
       )}
-      <div className="prose mt-10" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        ref={proseRef}
+        className="prose mt-10"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </article>
   );
 }
