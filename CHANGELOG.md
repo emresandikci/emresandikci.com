@@ -1,3 +1,15 @@
+## [1.5.1](https://github.com/emresandikci/emresandikci.com/compare/v1.5.0...v1.5.1) (2026-11-06)
+
+
+### Bug Fixes
+
+* **a11y:** add a document title to the not found page ([4e84592](https://github.com/emresandikci/emresandikci.com/commit/4e84592580c97b25a8c89c6b33abe3828f56bddc))
+* **a11y:** correct heading order on pages and old posts ([c60773b](https://github.com/emresandikci/emresandikci.com/commit/c60773b28bbe540ca9268e4882cb50ebdcdd29ca))
+* **a11y:** fix cv menu aria-controls and hide decorative icons ([3872348](https://github.com/emresandikci/emresandikci.com/commit/3872348c73a953f54395f922dd11992f1aa37399))
+* **a11y:** name code blocks and fix Shiki color contrast ([5958dc0](https://github.com/emresandikci/emresandikci.com/commit/5958dc000672ce72729b1b272af052d73d3d5bb4))
+* **a11y:** raise light theme accent contrast to AA ([1543e91](https://github.com/emresandikci/emresandikci.com/commit/1543e91f5615bd5ac795b2ebebb33a393ba60451)), closes [#0b8058](https://github.com/emresandikci/emresandikci.com/issues/0b8058)
+* **a11y:** underline the Medium link in posts ([532ff61](https://github.com/emresandikci/emresandikci.com/commit/532ff615d6b37240dd37ec69df2081da63240042))
+
 # [1.5.0](https://github.com/emresandikci/emresandikci.com/compare/v1.4.0...v1.5.0) (2026-10-28)
 
 
