@@ -16,7 +16,7 @@ If I want to make a definition of this concept, I would like to explain it like
 
 _what do you think about this definition? Is this definition sound good? I guess, yes it is. But this is not that easy don’t forget that._
 
-### Responsibility
+## Responsibility
 
 To be work as a freelancer, you have to so much under discipline. At the top of these, time planning and motivation.
 
@@ -33,13 +33,13 @@ To be work as a freelancer, you have to so much under discipline. At the top of 
 
 Some of the base responsibilities are above which I list. But probably you will face more stuff than I said.
 
-### Confusion of Concepts (Freelance and Remote)
+## Confusion of Concepts (Freelance and Remote)
 
 ![](/blog/work-as-a-freelancer/image-2.jpeg)
 
 While explaining the concept of Freelance, I would like to point out the most decisive fine line between the concepts of **Freelance and Remote** working, which should not be confused with each other but are similar. But if you are a remote employee, you are also the Contract Worker. Actually, I mean exactly what you have to do in a standard company such as meetings, working hours, deadlines, company rules, etc. On the other hand, you would have to go out of the house to go to work in the mornings and spend time in an office environment until the evening, or I can say that you do not need to be in the same city or country as the company, the project owner.
 
-### Which Professions are Eligible?
+## Which Professions are Eligible?
 
 So, thinking that this much explanation satisfied you, **“Which professions are ideal for being a freelancer?”** I seem to hear you ask. So let me give you a few examples of jobs where you can be Freelancers;
 
@@ -69,7 +69,7 @@ Let’s talk about the websites where you can find freelance jobs online, I woul
 
 Among those I shared above, I can especially recommend Upwork and Freelancer websites.
 
-### What Should I Pay Attention To In Some Freelance job websites?
+## What Should I Pay Attention To In Some Freelance job websites?
 
 ![](/blog/work-as-a-freelancer/image-4.jpeg)
 
@@ -94,7 +94,7 @@ Hourly wages are calculated on the basis of the minimum hourly working wage set 
 
 Fixed pricing is generally based on the freelancer’s bidding on a project with a certain fee. The price set by the project owner usually indicates the maximum price he can give or can be considered as the fixed price that the freelancer will set.
 
-### How should the project be planned and what should I pay attention to?
+## How should the project be planned and what should I pay attention to?
 
 There is no reason not to take the project if you do not have any previous experience and believe that you can handle the project when buying a freelance project.
 
@@ -103,7 +103,7 @@ There is no reason not to take the project if you do not have any previous exper
 -   In freelance projects, you should divide the work into milestones and define a fee for each milestone. This is the biggest factor that will finance you until the end of the project. In addition, it will visualize how well you plan your work and reflect on the other side that you are doing a professional job.
 -   The most important issue is to determine the boundaries of the project on paper and to agree on paper before analyzing. This step is the primary point you need to do in terms of both the project and your health. Otherwise, neither disagreements nor the project ends. If you skip the stage and enter the project directly, you will have to hear this phrase all the time **“I didn’t want it that way”** and **“Can we add that too?”** …
 
-### Project into Milestones
+## Project into Milestones
 
 ![](/blog/work-as-a-freelancer/image-5.jpeg)
 
@@ -113,7 +113,7 @@ When dividing Milestone, you can collect each step under two general headings as
 
 Let’s design a milestone, assuming that we will allocate $ 40 per hour and 5 days a week, as mentioned above. With a very simple mathematical formula, we will calculate the total and the fee we will receive per milestone. To take into account the exceptional cases that may arise. Adding to the project completion period for a few weeks in exceptional cases outside the development process.
 
-### Calculation
+## Calculation
 
 > **_weeklyWage $1000_** _\= hourlyWage($40) \* Daily(5)hours \* Weekly(5)day;_
 

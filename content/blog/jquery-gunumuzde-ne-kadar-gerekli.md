@@ -15,7 +15,7 @@ Geçmişte ve günümüzde birçok kişi henüz javascript bilmeden ve hatta bir
 
 Konuyu fazla saptırmadan asıl meselemize gelelim.
 
-### **Neden** [**JQuery**](https://www.w3schools.com/jquery/default.asp) **?**
+## **Neden** [**JQuery**](https://www.w3schools.com/jquery/default.asp) **?**
 
 Aklıma gelen başlıca sayılabilecek birkaç sebebi şöyle sıralabiliriz;
 
@@ -24,13 +24,13 @@ Aklıma gelen başlıca sayılabilecek birkaç sebebi şöyle sıralabiliriz;
 -   Benzer fazla alternatifler olmaması,
 -   Uzun yıllar DOM manipülasyonunun çok basit bir şekilde yapmamıza imkan sağladı.
 
-### **Neden** [**Javascript**](https://www.w3schools.com/js/default.asp) **?**
+## **Neden** [**Javascript**](https://www.w3schools.com/js/default.asp) **?**
 
 Herhangi bir kütüphane referansı eklenmeden direk olarak bütün tarayıcılarda (browser) kolayca çalıştırılabilmesi ve bunun en büyük avantajı, sunucuya bir istek (request) gittiğinde bize cevap (response) olarak dönen sayfanın boyutu eklenen her 3.party javascript veya css kütüphanelerinden dolayı artmasına neden olacaktır.
 
 Aslında bu duruma şöyle bakarsak ufkunuzu biraz daha açmış olurum sanırım.Projemize tabiki bazı 3.party kütüphaneler ekleyeceğiz ama birçoğu içerisinde kullanmadığımız birçok kod parçacığı ile birlikte sayfamızın boyutu büyütecektir.Bunun için elimizden geldiğince daha az kullanmaya dikkat etmeliyiz.
 
-### **Birkaç Örnek Vermek Gerekirse**
+## **Birkaç Örnek Vermek Gerekirse**
 
 Şimdi JQuery’nin basit şekilde yaptığı ve ihtiyaçlarımızı karşılayan birkaç kod örneğinin pure (vanilla) javascript karşılığı ile size göstermek istiyorum ki, neden JQuery ihtiyacımızın gereksiz olduğu durumları daha net bir şekilde size anlatmış olurum.
 
@@ -143,14 +143,14 @@ fetch(url, options)
 
 > Yukarıda belirttiğim bazı örnekler gibi JQuery’e bağımlı kalmadan birçok işimizi zaten halledebiliyorken neden ekstra bir kütüphane ile sayfamızı yoralım ? Bunlar sadece benim değindiğim çok kullanılan birkaç özelliktir.
 
-### Peki Ya Animasyonlar Ne Olacak ?
+## Peki Ya Animasyonlar Ne Olacak ?
 
 Artık animasyonların bir çoğunu CSS3 ile yapabiliyoruz.Burada amacımız hiç 3.party bir kütüphane kullanmamak değil, amacımız herşeyi içinde barındıran kütüphaneler yerine sadece spesifik amaçlarımız için ihtiyacımız olan kütüphaneleri projemize dahil etmek daha mantıklı bir çözüm olacaktır.Hali hazırda olan [**Animate CSS**](https://daneden.github.io/animate.css/) sizin için güzel bir çözüm olabilir.
 
-### SPA (Single Page Application)
+## SPA (Single Page Application)
 
 SPA uygulamaları çok yaygın değilken, bazı client-side işlerimizi çok gelişmiş (angular,ember,react,vue gibi) javascript kütüphaneleri veya framework’leri yokken, JQuery kullanırdık.Basit işleri çözmek için biçilmiş kaftandı bizim için.Ama günümüzde SPA yaygınlaşması ile hayatımıza giren birçok yeni JS kütüphanelerinin boyutları küçüldü ve bağımlılıklar kendimiz belirleyerek sadece ihtiyacımız olan ek özellikleri ekleyerek sayfamızda oluşan kalabalığıda azaltmış ve böylece JQuery ile oluşan kod karmaşası ortadan kalkmış oldu.
 
-### Sonuç
+## Sonuç
 
 JQuery öldü mü diye sorarsanız, bu kullanılacak projeye, yapılacak işlere veya tamamen sizin tercihinize kalmış bir durum.Ben elimden geldiğince JQuery de kullandığımız birçok özelliğin zaten pure (vanilla) JavaScript ile yapabildiğimizi göstermek istedim.Sizinde görüşlerinizi ve eleştirilerinizi almak isterim.Şimdilik benden bu kadar.Görüşmek dileğiyle.

@@ -34,7 +34,7 @@ function BlogIndex() {
         </a>
       </div>
       <div className="mt-10">
-        <PostList posts={posts} />
+        <PostList posts={posts} heading="h2" />
       </div>
     </div>
   );

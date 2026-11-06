@@ -1,7 +1,13 @@
 import { Link } from '@tanstack/react-router';
 import type { PostMeta } from '~/utils/blog/post';
 
-export function PostList({ posts }: { posts: PostMeta[] }) {
+export function PostList({
+  posts,
+  heading: Heading = 'h3',
+}: {
+  posts: PostMeta[];
+  heading?: 'h2' | 'h3';
+}) {
   if (!posts.length) return <p className="text-muted">No posts yet.</p>;
 
   return (
@@ -14,12 +20,12 @@ export function PostList({ posts }: { posts: PostMeta[] }) {
             hrefLang={post.lang}
             className="group block"
           >
-            <h3
+            <Heading
               lang={post.lang}
               className="text-lg font-semibold text-heading transition group-hover:text-accent"
             >
               {post.title}
-            </h3>
+            </Heading>
             <p className="mt-1 font-mono text-xs text-muted">
               <span className="mr-2 rounded-full border border-line px-1.5 py-px uppercase">
                 {post.lang}
