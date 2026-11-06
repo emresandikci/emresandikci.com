@@ -35,7 +35,12 @@ function PostPage() {
       {post.medium && (
         <p className="mt-2 text-sm text-muted">
           Originally published on{' '}
-          <a href={post.medium} target="_blank" rel="noreferrer" className="text-accent">
+          <a
+            href={post.medium}
+            target="_blank"
+            rel="noreferrer"
+            className="text-accent underline underline-offset-2"
+          >
             Medium
           </a>
           .
