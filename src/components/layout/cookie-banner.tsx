@@ -1,4 +1,5 @@
 import { useState, useSyncExternalStore } from 'react';
+import { Link } from '@tanstack/react-router';
 import {
   CONSENT_ACCEPTED,
   CONSENT_DECLINED,
@@ -44,7 +45,10 @@ export function CookieBanner() {
       <p className="mt-2">
         We use cookies and similar technologies to keep this site working and, only if you agree,
         to understand how it is used. You can accept or decline, and the site works the same
-        either way.
+        either way.{' '}
+        <Link to="/privacy" className="text-accent underline underline-offset-4">
+          privacy policy
+        </Link>
       </p>
       <div className="mt-3 flex gap-2">
         <button type="button" className={button} onClick={() => answer(CONSENT_ACCEPTED)}>
