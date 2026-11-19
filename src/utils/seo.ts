@@ -1,5 +1,5 @@
 import { LANGS, type Lang } from './i18n';
-import { EMAIL, GA_ID, GITHUB_URL, LINKEDIN_URL, NAME, RSS_PATH, SITE_URL, TITLE } from './site';
+import { EMAIL, GITHUB_URL, LINKEDIN_URL, NAME, RSS_PATH, SITE_URL, TITLE } from './site';
 
 type PageHeadOptions = {
   title?: string;
@@ -83,13 +83,7 @@ export function rootHead(stylesheet: string) {
         href: RSS_PATH,
       },
     ],
-    scripts: [
-      { src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`, async: true },
-      {
-        children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`,
-      },
-      { type: 'application/ld+json', children: personJsonLd() },
-    ],
+    scripts: [{ type: 'application/ld+json', children: personJsonLd() }],
   };
 }
 

@@ -7,10 +7,12 @@ import {
   useMatches,
 } from '@tanstack/react-router';
 import { version } from '../../package.json';
+import { CookieBanner } from '~/components/layout/cookie-banner';
 import { Footer } from '~/components/layout/footer';
 import { Header } from '~/components/layout/header';
 import { TerminalIntro } from '~/components/layout/terminal-intro';
 import { NotFound } from '~/components/not-found';
+import { analyticsScript } from '~/utils/analytics';
 import { introScript } from '~/utils/intro';
 import { rootHead } from '~/utils/seo';
 import { themeScript } from '~/utils/theme';
@@ -40,6 +42,7 @@ function RootDocument({ children }: { children: ReactNode }) {
       <head>
         <ScriptOnce>{themeScript}</ScriptOnce>
         <ScriptOnce>{introScript}</ScriptOnce>
+        <ScriptOnce>{analyticsScript}</ScriptOnce>
         <HeadContent />
       </head>
       <body>
@@ -47,6 +50,7 @@ function RootDocument({ children }: { children: ReactNode }) {
         <Header />
         <main className="mx-auto max-w-3xl px-4 sm:px-6">{children}</main>
         <Footer />
+        <CookieBanner />
         <Scripts />
       </body>
     </html>
