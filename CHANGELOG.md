@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/emresandikci/emresandikci.com/compare/v1.5.2...v1.6.0) (2026-11-19)
+
+
+### Features
+
+* load Google Analytics only after cookie consent ([0779790](https://github.com/emresandikci/emresandikci.com/commit/0779790cc6f31fb4bb1d411f6fb0192bc633ecb1))
+
 ## [1.5.2](https://github.com/emresandikci/emresandikci.com/compare/v1.5.1...v1.5.2) (2026-11-06)
 
 
