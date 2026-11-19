@@ -37,12 +37,14 @@ export function CookieBanner() {
   return (
     <div
       role="dialog"
-      aria-label="Analytics cookies"
+      aria-label="Your privacy"
       className="fixed inset-x-4 bottom-4 z-50 rounded-lg border border-line bg-surface p-4 font-mono text-sm text-fg shadow-lg sm:left-auto sm:max-w-sm"
     >
-      <p>
-        Can I use Google Analytics to count visits? It sets cookies and sends your visit to
-        Google. Nothing loads unless you accept.
+      <p className="font-semibold">Your privacy</p>
+      <p className="mt-2">
+        We use cookies and similar technologies to keep this site working and, only if you agree,
+        to understand how it is used. You can accept or decline, and the site works the same
+        either way.
       </p>
       <div className="mt-3 flex gap-2">
         <button type="button" className={button} onClick={() => answer(CONSENT_ACCEPTED)}>
