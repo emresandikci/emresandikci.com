@@ -18,6 +18,7 @@ export function sitemapXml(posts: PostMeta[]) {
     { path: '/' },
     { path: '/cv' },
     { path: '/blog' },
+    { path: '/privacy' },
     ...posts.map((post) => ({ path: `/blog/${post.slug}`, lastmod: post.date })),
   ];
 

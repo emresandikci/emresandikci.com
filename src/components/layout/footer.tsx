@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router';
 import { GITHUB_URL, LINKEDIN_URL, MAILTO, NAME, RSS_PATH } from '~/utils/site';
 import { useVisitorIp } from '~/utils/visitor-ip';
 
@@ -21,6 +22,9 @@ export function Footer() {
         <a href={RSS_PATH} className={link}>
           rss
         </a>
+        <Link to="/privacy" className={link}>
+          privacy
+        </Link>
       </div>
       <p className="mt-4 flex flex-wrap justify-between gap-2 text-xs">
         <span>

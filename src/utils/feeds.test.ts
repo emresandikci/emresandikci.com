@@ -32,7 +32,14 @@ describe('escapeXml', () => {
 describe('sitemapXml', () => {
   it('lists the static pages and every post with its date', () => {
     const xml = sitemapXml(posts);
-    for (const path of ['/', '/cv', '/blog', '/blog/y-ve-z', '/blog/work-as-a-freelancer']) {
+    for (const path of [
+      '/',
+      '/cv',
+      '/blog',
+      '/privacy',
+      '/blog/y-ve-z',
+      '/blog/work-as-a-freelancer',
+    ]) {
       expect(xml).toContain(`<loc>https://www.emresandikci.com${path}</loc>`);
     }
     expect(xml).toContain('<lastmod>2017-06-30</lastmod>');
