@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/emresandikci/emresandikci.com/compare/v1.6.0...v1.7.0) (2026-11-19)
+
+
+### Features
+
+* add a privacy and cookie policy page ([f2a6a21](https://github.com/emresandikci/emresandikci.com/commit/f2a6a21c512ce6ca95b99e0581c91699d1d1857e))
+* use a general privacy message in the cookie banner ([874c8d0](https://github.com/emresandikci/emresandikci.com/commit/874c8d0f834bf02c5b6b38b1cee0ba580364d2d7))
+
 # [1.6.0](https://github.com/emresandikci/emresandikci.com/compare/v1.5.2...v1.6.0) (2026-11-19)
 
 
